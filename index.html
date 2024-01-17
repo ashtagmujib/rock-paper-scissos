@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 "> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
@@ -25,16 +25,30 @@
     </header>
     
     <main>
-      <!-- <img id="Scissors" src="./images/icon-scissors.svg" alt="Scissors"> -->
+
       <div class="action-btn">
         
-        <div id="paper" >
+        <div id="paper" class="choice">
           <img src="./images/icon-paper.svg" alt="paper">
         </div>
 
+        <div id="scissors"  class="choice">
+          <img id="Scissors" src="./images/icon-scissors.svg" alt="Scissors">
+        </div>
+
         <img  id="triangle" src="./images/bg-triangle.svg" alt="triangle">
+
+        <div id="rock"  class="choice">
+          <img src="./images/icon-rock.svg" alt="rock">
+        </div>
+
       </div>
-      <!-- <img id="rock" src="./images/icon-rock.svg" alt="rock"> -->
+
+      <div class="rule-tab">
+        <button id="rules"> Rules </button>
+      </div>
+
+
     </main>
 
 
@@ -47,7 +61,7 @@
 
 
       <!-- Score
-      Rules
+      
     
       You Picked
       The House Picked
