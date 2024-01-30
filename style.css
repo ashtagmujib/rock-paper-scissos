@@ -18,7 +18,7 @@ html, body {
 
     height: auto;
     min-height: 100vh;
-    padding: 20px;
+    padding: 20px 0;
 
     background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
@@ -32,6 +32,8 @@ html, body {
 
 header {
     width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     height: auto;
     padding: 20px;
     border: 2px solid hsl(217, 16%, 45%);
@@ -67,14 +69,23 @@ main {
     display: block;
 }
 
+
 .action-btn {
     margin: 150px auto 50px;
     position: relative;
 
     width: fit-content;
+    height: auto;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:330px) {
+    .action-btn {
+        transform: scale(90%);
+    }
 }
 
 
@@ -88,6 +99,9 @@ main {
     position: absolute;
     padding: 20px;
     border-radius: 50%;
+
+    width: auto;
+    height: auto;
 }
 
 .choice img {
@@ -95,6 +109,7 @@ main {
     padding: 20px;
     border-radius: 50%;
 }
+
 
 #paper {
     top: -40px;
@@ -135,6 +150,52 @@ main {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+
+.rulesBlock {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    padding: 100px 0 ;
+    height: auto;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.rulesBlock.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+.rulesBlock div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rulesBlock div h1 {
+    margin-bottom: 100px;
+}
+
+#closeBtn {
+    outline: none;
+    background: none;
+    border: none;
+    margin-top: 100px;
+}
+
 
 /* end of maim section */
 
